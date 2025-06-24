@@ -1,0 +1,42 @@
+<app-navigation/>
+<h2>Buscador de vuelos activos</h2>
+
+<input [(ngModel)]="searchValue" placeholder="Introduce un vuelo por el icao (e.g. AAL100)">
+<button (click)="search()">Buscar</button>
+
+<hr>
+
+<h3>Vuelos Activos</h3>
+<table *ngIf="flights.length">
+  <thead>
+    <tr>
+      <th>ICAO</th>
+      <th>Aerolínea</th>
+      <th>Desde</th>
+      <th>Hasta</th>
+      <th>Estado</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of flights">
+      <td>{{ f.flight.icao }}</td>
+      <td>{{ f.airline.name }}</td>
+      <td>{{ f.departure.airport }}</td>
+      <td>{{ f.arrival.airport }}</td>
+      <td>{{ f.flight_status }}</td>
+      <button [routerLink]="['/details', f.flight.icao]">Detalles</button>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<div *ngIf="selectedFlight">
+  <h3>Detalles del Vuelo</h3>
+  <p><strong>Vuelo:</strong> {{ selectedFlight.flight.icao }}</p>
+  <p><strong>Aerolínea:</strong> {{ selectedFlight.airline.name }}</p>
+  <p><strong>Estado:</strong> {{ selectedFlight.flight_status }}</p>
+  <p><strong>Salida:</strong> {{ selectedFlight.departure.airport }} a las {{ selectedFlight.departure.scheduled }}</p>
+  <p><strong>Llegada:</strong> {{ selectedFlight.arrival.airport }} a las {{ selectedFlight.arrival.scheduled }}</p>
+</div>
