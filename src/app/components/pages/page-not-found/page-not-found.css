@@ -1,0 +1,14 @@
+.page-not-found{
+  height: 100vh;             
+  display: flex;
+  justify-content: center;     
+  align-items: center;
+  flex-direction: column;
+}
+
+.number-404{
+    text-align: center;          
+    display: flex;
+    font-size: 300px;  
+    gap: 0.5rem;   
+}
