@@ -33,5 +33,5 @@ Detalle completo de un vuelo al hacer clic.
 
 Diseño responsive para dispositivos móviles.
 
-# Diseñado por Tomás Leguizamón 
+# Diseñado por Tomás Leguizamón (https://github.com/TomasLeguizamon1207)
 
