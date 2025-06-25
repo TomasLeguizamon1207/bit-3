@@ -4,7 +4,7 @@
 Una aplicación web construida con Angular que permite consultar el estado de vuelos en tiempo real mediante la API de AviationStack, utilizando el código ICAO de cada vuelo.
 
 # 🛠️ Tecnologías aplicadas
-  Angular 17 (con Standalone Components)
+  Angular
 
   TypeScript
 
